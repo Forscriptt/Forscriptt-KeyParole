@@ -1,0 +1,38 @@
+import sys
+from main import mainApp
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox, QLabel
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import pyqtSlot
+
+class signInClass:
+    def SignIn():
+        app = QApplication(sys.argv)
+
+        SignInWindow = QMainWindow()
+        SignInWindow.show()
+
+        SignInWindow.setWindowTitle("Sign in")
+        SignInWindow.setGeometry(725, 200, 500, 650)
+        SignInWindow.setMinimumSize(500, 650)
+        SignInWindow.setMaximumSize(500, 650)
+        SignInWindow.setWindowIcon(QIcon('./images/logo_max.png'))
+
+        global lable
+        lable = QLabel('Master password', SignInWindow)
+        lable.resize(150, 40)
+        lable.show()
+
+        global masterPasswordInput
+
+        masterPasswordInput = QLineEdit(SignInWindow)
+        masterPasswordInput.move(120, 200)
+        masterPasswordInput.resize(250, 32)
+        masterPasswordInput.setStyleSheet("backgroung-color: white")
+        masterPasswordInput.show()
+
+        eneterButton = QPushButton("enter", SignInWindow)
+        eneterButton.move(190, 235)
+        eneterButton.show()
+
+        eneterButton.clicked.connect(mainApp.App.runMainFunc())
+        
