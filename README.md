@@ -7,3 +7,6 @@ KeyParole is Forscriptt's version of a password & account manager, made to keep 
 
 <img width="1000" alt="github-banner" align="center" src="https://github.com/Forscriptt/Forscriptt-KeyParole/blob/main/images/banner.png">
 
+![Static Badge](https://img.shields.io/badge/Python-green?style=for-the-badge&logo=python&label=Language)
+![Static Badge](https://img.shields.io/badge/PyQt5-white?style=for-the-badge&label=Library)
+
